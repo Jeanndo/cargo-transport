@@ -1,0 +1,33 @@
+ body{
+   background-color:rgba(70, 70, 51, 0.822);
+} 
+
+.container{
+  padding: 1%;
+}
+.adminContainer,.driver-container{
+
+ padding: 2%;
+}
+.form{
+  padding:1%;
+  border:2px solid rgba(0, 0, 255, 0.541);
+}
+.trackBtn{
+  text-align: center;
+}
+
+.tracking-form{
+ margin:5% 10% 0% 35%; 
+}
+.Icons{
+  color:rgba(0, 0, 255, 0.541);
+}
+.Auth-container{
+  height: 100vh;
+  background-image: url("https://images.unsplash.com/photo-1605705658744-45f0fe8f9663?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8dHJ1Y2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60");
+  background-position: bottom;
+  background-size:80%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
