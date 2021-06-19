@@ -20,7 +20,6 @@ const Auth = () => {
 
     const handleSubmit = (event)=>{
         event.preventDefault();
-        console.log(formData)
         dispatch(signup(formData,history))
        setFormData({firstName:'',lastName:'',role:'',email:'',password:'',confirmPassword:''})
    }

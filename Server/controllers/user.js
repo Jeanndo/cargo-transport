@@ -26,7 +26,8 @@ export const signin = async (req, res) => {
   }
 };
 export const signup = async (req, res) => {
-  const { email, password, confirmPassword, firstName, lastName,role,phone} = req.body;
+  const { email, password, confirmPassword, firstName, lastName, role, phone } =
+    req.body;
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser)
@@ -40,7 +41,7 @@ export const signup = async (req, res) => {
       name: `${firstName}`,
       lastName,
       role,
-      phone
+      phone,
     });
     const token = jwt.sign({ email: result.email, id: result._id }, "test", {
       expiresIn: "1h",
@@ -51,13 +52,11 @@ export const signup = async (req, res) => {
   }
 };
 
-export const getUsers = async (req,res)=>{
-try {
-  const allUsers = await User.find();
-  console.log(allUsers);
-  res.status(200).json(allUsers);
-} catch (error) {
-  console.log(error);
-}
-  
-}
+export const getUsers = async (req, res) => {
+  try {
+    const allUsers = await User.find();
+    res.status(200).json(allUsers);
+  } catch (error) {
+    console.log(error);
+  }
+};

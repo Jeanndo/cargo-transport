@@ -7,12 +7,9 @@ import {deleteTruck} from "../../../../redux/actions/trucks";
 import {Button} from "@material-ui/core";
 import moment from 'moment'
 
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-
 const Truck = ({truck,setCurrentId}) => {
   const dispatch = useDispatch();
   const[user,setUser]= useState(JSON.parse(localStorage.getItem('profile')));
-console.log(user?.result?._id)
   return (
     <>
             <TableCell component="th" scope="row">

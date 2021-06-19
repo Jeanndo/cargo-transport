@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Drawer} from 'antd';
-import {Button} from "@material-ui/core";
-import User from './user'
+import React, { useState } from "react";
+import { Drawer } from "antd";
+import { Button } from "@material-ui/core";
+import User from "./user";
 
-const AllUsers = ({users}) => {
+const AllUsers = ({ users }) => {
   const [visible, setVisible] = useState(false);
   const showDrawer = () => {
     setVisible(true);
@@ -13,8 +13,13 @@ const AllUsers = ({users}) => {
   };
   return (
     <>
-      <Button className="ml-5"variant="outlined" color="primary" onClick={showDrawer}>
-       users
+      <Button
+        className="ml-5"
+        variant="outlined"
+        color="primary"
+        onClick={showDrawer}
+      >
+        users
       </Button>
       <Drawer
         title="All Users"
@@ -24,12 +29,14 @@ const AllUsers = ({users}) => {
         visible={visible}
       >
         <div className="Users">
-
-        { users?.map((user,index)=>(
-        <div style={{backgroundColor:'rgba(0, 0, 255, 0.541)'}}key={index}>
-         <User user={user}/>
-        </div>
-        ))}
+          {users?.map((user, index) => (
+            <div
+              style={{ backgroundColor: "rgba(0, 0, 255, 0.541)" }}
+              key={index}
+            >
+              <User user={user} />
+            </div>
+          ))}
         </div>
       </Drawer>
     </>

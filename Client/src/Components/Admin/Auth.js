@@ -8,7 +8,6 @@ import {
   Container,
 } from "@material-ui/core";
 import useStyles from "./styles";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Input from "./Input";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
@@ -18,7 +17,7 @@ const initialState = {
   firstName: "",
   lastName: "",
   role: "",
-  phone:'',
+  phone: "",
   email: "",
   password: "",
   confirmPassword: "",
@@ -35,13 +34,12 @@ const Auth = ({ handleClose }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(formData);
     dispatch(signup(formData, history));
     setFormData({
       firstName: "",
       lastName: "",
       role: "",
-      phone:"",
+      phone: "",
       email: "",
       password: "",
       confirmPassword: "",
@@ -72,7 +70,12 @@ const Auth = ({ handleClose }) => {
                 handleChange={handleChange}
                 half
               />
-              <Input name="phone" label="Phone" handleChange={handleChange} type="number"/>
+              <Input
+                name="phone"
+                label="Phone"
+                handleChange={handleChange}
+                type="number"
+              />
               <Input name="role" label="Role" handleChange={handleChange} />
               <Input
                 name="email"

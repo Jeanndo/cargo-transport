@@ -28,7 +28,6 @@ const useStyles = makeStyles({
 const Trucks = ({ setCurrentId }) => {
   const classes = useStyles();
   const trucks = useSelector((state) => state.trucks);
-  console.log(trucks.length);
 
   return !trucks.length ? (
     <CircularProgress />

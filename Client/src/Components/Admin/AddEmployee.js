@@ -1,10 +1,8 @@
-import React from 'react';
-import { Drawer} from 'antd';
-import {Button} from "@material-ui/core"
-import { PlusOutlined } from '@ant-design/icons';
-import SignUpUser from './Auth';
-
-
+import React from "react";
+import { Drawer } from "antd";
+import { Button } from "@material-ui/core";
+import { PlusOutlined } from "@ant-design/icons";
+import SignUpUser from "./Auth";
 
 class DrawerForm extends React.Component {
   state = { visible: false };
@@ -24,7 +22,12 @@ class DrawerForm extends React.Component {
   render() {
     return (
       <>
-        <Button className="ml-5" variant="outlined" color="primary" onClick={this.showDrawer}>
+        <Button
+          className="ml-5"
+          variant="outlined"
+          color="primary"
+          onClick={this.showDrawer}
+        >
           <PlusOutlined /> New account
         </Button>
         <Drawer
@@ -33,9 +36,8 @@ class DrawerForm extends React.Component {
           onClose={this.onClose}
           visible={this.state.visible}
           bodyStyle={{ paddingBottom: 80 }}
-         
         >
-          <SignUpUser/>
+          <SignUpUser />
         </Drawer>
       </>
     );

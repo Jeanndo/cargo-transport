@@ -15,8 +15,6 @@ const NavBar = () => {
 
   const[user,setUser]= useState(JSON.parse(localStorage.getItem('profile')));
 
-   console.log(user?.result?.role);
-
    const Logout =()=>{
 
    dispatch({type:'LOGOUT'});
@@ -34,9 +32,6 @@ const NavBar = () => {
     setUser(JSON.parse(localStorage.getItem('profile'))) 
   },[Location])
 
-    const handlePrint = ()=>{
-      history.push('/print');
-    }
   return (
     <>
        

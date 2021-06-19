@@ -20,33 +20,34 @@ const useStyles = makeStyles({
 const Trucks = ({ setCurrentId }) => {
   const classes = useStyles();
   const trucks = useSelector((state) => state.trucks);
- 
-  console.log(trucks.length);
 
-  return (
-    !trucks.length? <CircularProgress/>:(
-      <TableContainer component={Paper}>
+  return !trucks.length ? (
+    <CircularProgress />
+  ) : (
+    <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="caption table">
         <TableHead>
           <TableRow>
-            <TableCell><b>Product</b></TableCell>
-            <TableCell align="right"><b>Quantity</b> </TableCell>
-            <TableCell align="right"><b>Location</b></TableCell>
+            <TableCell>
+              <b>Product</b>
+            </TableCell>
+            <TableCell align="right">
+              <b>Quantity</b>{" "}
+            </TableCell>
+            <TableCell align="right">
+              <b>Location</b>
+            </TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {
-            trucks.map((truck,index)=>(
+          {trucks.map((truck, index) => (
             <TableRow key={index}>
-            <Truck truck={truck} setCurrentId={setCurrentId} />
-           </TableRow>
-            ))
-          }
-      
-          </TableBody>
+              <Truck truck={truck} setCurrentId={setCurrentId} />
+            </TableRow>
+          ))}
+        </TableBody>
       </Table>
     </TableContainer>
-    ) 
   );
 };
 
