@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import TableCell from "@material-ui/core/TableCell";
 import moment from 'moment'
+
 const Truck = ({ truck, setCurrentId }) => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
-  console.log(user?.result?._id);
   return (
     <>
       <TableCell component="th" scope="row">

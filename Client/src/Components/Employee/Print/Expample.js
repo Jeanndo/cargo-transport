@@ -1,6 +1,6 @@
 import React from "react";
 import ReactToPrint from "react-to-print";
-import {Button } from '@material-ui/core'
+import { Button } from "@material-ui/core";
 import Print from "./Printout/Employee";
 class ComponentToPrint extends React.Component {
   render() {
@@ -14,13 +14,13 @@ class Example extends React.Component {
       <div>
         <ReactToPrint
           trigger={() => (
-            <Button 
-            variant="outlined"
-             color="primary" 
-             style={{ cursor: "pointer",margin:'3% 0 0 40%'}}
-             >
-               Print
-             </Button>
+            <Button
+              variant="outlined"
+              color="primary"
+              style={{ cursor: "pointer", margin: "3% 0 0 40%" }}
+            >
+              Print
+            </Button>
           )}
           content={() => this.componentRef}
         />

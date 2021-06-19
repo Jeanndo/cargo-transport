@@ -2,13 +2,11 @@ import React,{useState,useEffect} from 'react';
 import Form from '../Form/Form';
 import Trucks from './Trucks/Trucks';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { useDispatch } from "react-redux";
 import {getTrucks} from '../../redux/actions/trucks';
 import SideBar from'./SideBar';
-import {useHistory} from "react-router-dom";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -28,8 +26,6 @@ const Admin = ()=>{
   const classes = useStyles();
   const [currentId,setCurrentId]= useState(null);
   const dispatch = useDispatch();
-  const history = useHistory();
-
   useEffect(()=>{
   dispatch(getTrucks());
   },[dispatch]);

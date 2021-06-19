@@ -17,9 +17,6 @@ const NavBar = () => {
   const Location =useLocation();
 
   const[user,setUser]= useState(JSON.parse(localStorage.getItem('profile')));
-
-   console.log(user?.result?.role);
-
    const Logout =()=>{
 
    dispatch({type:'LOGOUT'});
